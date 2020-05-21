@@ -45,6 +45,14 @@ public class CategoryController {
         return ResponseVo.ok(pageResultVo);
     }
 
+    @ApiOperation("分类树状图")
+
+    @GetMapping("parent/{parentId}")
+    public ResponseVo<List<CategoryEntity>> queryCategoryByPid(@PathVariable("parentId")Long Pid){
+        List<CategoryEntity> categories = categoryService.queryCategoryByPid(Pid);
+        return ResponseVo.ok(categories);
+    }
+
 
     /**
      * 信息

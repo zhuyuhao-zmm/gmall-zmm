@@ -1,23 +1,21 @@
-package com.atguigu.gmall.pms.service;
+package com.atguigu.gmall.wms.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
-import com.atguigu.gmall.pms.entity.SpuEntity;
+import com.atguigu.gmall.wms.entity.WareSkuEntity;
 
 import java.util.Map;
 
 /**
- * spu信息
+ * 商品库存
  *
  * @author fengge
  * @email fengge@atguigu.com
- * @date 2020-05-18 22:04:16
+ * @date 2020-05-21 23:11:31
  */
-public interface SpuService extends IService<SpuEntity> {
+public interface WareSkuService extends IService<WareSkuEntity> {
 
     PageResultVo queryPage(PageParamVo paramVo);
-
-    PageResultVo querySpuPageByCid(Long cid, PageParamVo pageParamVo);
 }
 
