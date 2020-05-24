@@ -1,5 +1,6 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -15,6 +16,8 @@ import com.atguigu.gmall.pms.service.SkuService;
 
 @Service("skuService")
 public class SkuServiceImpl extends ServiceImpl<SkuMapper, SkuEntity> implements SkuService {
+
+
 
     @Override
     public PageResultVo queryPage(PageParamVo paramVo) {
