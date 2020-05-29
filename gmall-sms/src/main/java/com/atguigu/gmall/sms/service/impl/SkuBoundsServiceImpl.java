@@ -19,6 +19,7 @@ import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.sms.mapper.SkuBoundsMapper;
 import com.atguigu.gmall.sms.entity.SkuBoundsEntity;
 import com.atguigu.gmall.sms.service.SkuBoundsService;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service("skuBoundsService")
@@ -41,6 +42,7 @@ public class SkuBoundsServiceImpl extends ServiceImpl<SkuBoundsMapper, SkuBounds
     }
 
     @Override
+    @Transactional
     public void saveSkuSales(SkuSaleVo skuSaleVo) {
         // 3.1. 积分优惠 sms_sku_bounds
         SkuBoundsEntity skuBoundsEntity = new SkuBoundsEntity();
