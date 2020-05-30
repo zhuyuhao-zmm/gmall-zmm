@@ -95,7 +95,6 @@ public class SpuController {
     @ApiOperation("删除")
     public ResponseVo delete(@RequestBody List<Long> ids){
 		spuService.removeByIds(ids);
-
         return ResponseVo.ok();
     }
 

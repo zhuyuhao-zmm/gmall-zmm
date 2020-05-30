@@ -2,6 +2,7 @@ package com.atguigu.gmall.pms.controller;
 
 import java.util.List;
 
+import com.atguigu.gmall.pms.service.impl.SpuServiceImpl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -41,6 +42,7 @@ public class AttrController {
                                                                          @RequestParam(value = "searchType",required = false)Integer searchType)
     {
         List<AttrEntity> attrEntities = attrService.queryAttrByCidOrTypeOrSearchType(cid, type, searchType);
+
         return ResponseVo.ok(attrEntities);
     }
 
