@@ -2,47 +2,46 @@ package com.atguigu.gmall.pms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
- * 属性分组
+ * sku销售属性&值
  * 
  * @author fengge
  * @email fengge@atguigu.com
  * @date 2020-05-18 22:04:16
  */
 @Data
-@TableName("pms_attr_group")
-public class AttrGroupEntity implements Serializable {
+@TableName("pms_sku_attr_value")
+public class SkuAttrValueEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 分组id
+	 * id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * 组名
+	 * sku_id
 	 */
-	private String name;
+	private Long skuId;
 	/**
-	 * 排序
+	 * attr_id
+	 */
+	private Long attrId;
+	/**
+	 * 销售属性名
+	 */
+	private String attrName;
+	/**
+	 * 销售属性值
+	 */
+	private String attrValue;
+	/**
+	 * 顺序
 	 */
 	private Integer sort;
-	/**
-	 * 组图标
-	 */
-	private String icon;
-	/**
-	 * 所属分类id
-	 */
-	private Long categoryId;
-	/**
-	 * 备注
-	 */
-	private String remark;
 
 }

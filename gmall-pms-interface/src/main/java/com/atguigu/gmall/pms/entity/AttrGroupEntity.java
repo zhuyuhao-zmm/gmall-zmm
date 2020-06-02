@@ -2,51 +2,46 @@ package com.atguigu.gmall.pms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
- * 商品三级分类
+ * 属性分组
  * 
  * @author fengge
  * @email fengge@atguigu.com
  * @date 2020-05-18 22:04:16
  */
 @Data
-@TableName("pms_category")
-public class CategoryEntity implements Serializable {
+@TableName("pms_attr_group")
+public class AttrGroupEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 分类id
+	 * 分组id
 	 */
 	@TableId
 	private Long id;
 	/**
-	 * 分类名称
+	 * 组名
 	 */
 	private String name;
-	/**
-	 * 父分类id
-	 */
-	private Long parentId;
-	/**
-	 * 是否显示[0-不显示，1显示]
-	 */
-	private Integer status;
 	/**
 	 * 排序
 	 */
 	private Integer sort;
 	/**
-	 * 图标地址
+	 * 组图标
 	 */
 	private String icon;
 	/**
-	 * 计量单位
+	 * 所属分类id
 	 */
-	private String unit;
+	private Long categoryId;
+	/**
+	 * 备注
+	 */
+	private String remark;
 
 }

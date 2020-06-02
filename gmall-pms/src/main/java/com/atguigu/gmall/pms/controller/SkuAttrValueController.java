@@ -34,6 +34,12 @@ public class SkuAttrValueController {
     @Autowired
     private SkuAttrValueService skuAttrValueService;
 
+    @GetMapping("sku/{skuId}")
+    public ResponseVo<List<SkuAttrValueEntity>> selectSkuAttrValueBySkuId(@PathVariable("skuId") Long skuId){
+        List<SkuAttrValueEntity> skuattrvalues = skuAttrValueService.selectSkuAttrValueBySkuId(skuId);
+        return ResponseVo.ok(skuattrvalues);
+    }
+
     /**
      * 列表
      */
